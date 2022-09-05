@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { userLogin } from '../model/userLogin';
 import { usuario } from '../model/usuario';
 
@@ -24,4 +25,20 @@ export class AuthService {
     cadastrar(usuario: usuario): Observable<usuario>{
       return this.http.post<usuario>('http://localhost:8080/usuario/cadastrar', usuario) // mesmos endpoints que estão no eclipse em controller usuario
     }
+
+    logado(){  // ele vai verificar se existe um token no meu enviroment se está preenchido, e ele só vai ser preenchido no entrar; e eu esse metodo vai retornar um true ou false
+      let ok: boolean = false
+
+        if (environment.token != ''){
+          ok= true
+        }
+
+      return ok
+
+    }
+
+
+
+
+
 }
