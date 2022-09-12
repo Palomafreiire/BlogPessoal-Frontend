@@ -29,7 +29,7 @@ export class InicioComponent implements OnInit {
     private router: Router,  //tem que sempre chamar uma variavel local de router se for usar na aplicação;
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService
+    public authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -39,7 +39,7 @@ export class InicioComponent implements OnInit {
     }
 
     this.gelAllTemas()
-    this.getAllPostagens()
+    this.getAllPostagem()
   }
   gelAllTemas(){
     this.temaService.getAllTema().subscribe((resp: tema[]) =>{
@@ -54,14 +54,14 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  getAllPostagens(){
+  getAllPostagem(){
     this.postagemService.getAllPostagem().subscribe((resp: postagem[])=>{
       this.listaPostagens = resp
     })
   }
 
   findByIdUser(){
-    this.authService.getByIdUser(this.idUser).subscribe((resp: usuario)=>{
+    this.authService.getByIdUser(this.idUser).subscribe((resp: usuario) => {
       this.usuario = resp
     })
   }
@@ -77,7 +77,7 @@ export class InicioComponent implements OnInit {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new postagem()
-      this.getAllPostagens()
+      this.getAllPostagem()
     })
   }
 
