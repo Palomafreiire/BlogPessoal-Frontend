@@ -26,6 +26,10 @@ export class AuthService {
       return this.http.post<usuario>('http://localhost:8080/usuario/cadastrar', usuario) // mesmos endpoints que estão no eclipse em controller usuario
     }
 
+    getByIdUser(id: number): Observable<usuario>{
+      return this.http.get<usuario>(`http://localhost:8080/usuario/${id}`)
+    }
+
     logado(){  // ele vai verificar se existe um token no meu enviroment se está preenchido, e ele só vai ser preenchido no entrar; e eu esse metodo vai retornar um true ou false
       let ok: boolean = false
 
