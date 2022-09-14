@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { userLogin } from '../model/userLogin';
 import { usuario } from '../model/usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class CadastrarComponent implements OnInit {
 
   constructor( 
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) {
     
   }
@@ -39,12 +41,12 @@ export class CadastrarComponent implements OnInit {
     this.usuario.tipo = this.tipoUsuario
 
     if(this.usuario.senha != this.confirmarSenha){
-        alert('Senha incorreta!!')
+        this.alertas.showAlertDanger('Senha incorreta!!')
     }else{
       this.authService.cadastrar(this.usuario).subscribe((resp: usuario) => {
         this.usuario = resp
         this.router.navigate(["/entrar"])
-        alert('Usuário cadastrado com sucesso!')
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!')
       })
       } // pq eu quero que ele pegue o usuario que cadastrei que esta sendo preenchido, sendo mandado pro meu servidor; 
   

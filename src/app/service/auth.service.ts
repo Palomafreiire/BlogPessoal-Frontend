@@ -45,7 +45,16 @@ export class AuthService {
 
     }
 
+    adm(){  // ele vai verificar se existe um token no meu enviroment se está preenchido, e ele só vai ser preenchido no entrar; e eu esse metodo vai retornar um true ou false
+      let ok: boolean = false
 
+        if (environment.tipo == 'adm'){
+          ok= true
+        }
+
+      return ok
+
+    }
 
 
 

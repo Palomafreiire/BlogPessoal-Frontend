@@ -34,11 +34,9 @@ export class EntrarComponent implements OnInit {
       environment.nome = this.userLogin.nome
       environment.foto = this.userLogin.foto
       environment.id = this.userLogin.id
+      environment.tipo = this.userLogin.tipo // fazer esse componente para bloquear quem for tipo normal ser bloqueados de certas funções no blog
 
-      console.log(environment.token)  // na hora que ele logar, gera todos esses consoles p ver se pegou o que tava no userlogin e jogou para essas variaveis de enviroment
-      console.log(environment.nome) // não precisa deixar isso no seu component, pode apagar.
-      console.log(environment.foto)
-      console.log(environment.id)
+      
 
       this.router.navigate(['/inicio'])
      }, erro =>{

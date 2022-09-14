@@ -18,10 +18,12 @@ export class InicioComponent implements OnInit {
 
     postagem: postagem = new postagem()
     listaPostagens: postagem[]
+    tituloPost: string
 
     tema: tema = new tema()
     listaTemas: tema[]
     idTema: number
+    nomeTema: string
 
     usuario: usuario = new usuario()
     idUser = environment.id
@@ -33,7 +35,7 @@ export class InicioComponent implements OnInit {
     private router: Router,  //tem que sempre chamar uma variavel local de router se for usar na aplicação;
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService,
+    public authService: AuthService,
     private alertas: AlertasService
 
   ) { }
@@ -90,6 +92,29 @@ export class InicioComponent implements OnInit {
       this.getAllPostagem()
     })
   }
+
+  findByTituloPostagem(){
+
+    if(this.tituloPost == ' '){
+      this.getAllPostagem()
+    }else{
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: postagem[]) =>{
+        this.listaPostagens = resp
+      })
+    }  
+  }
+
+  findByNomeTema(){
+
+    if(this.nomeTema == ' '){
+      this.gelAllTemas()
+    }else{
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: tema[]) =>{
+        this.listaTemas = resp
+      })
+    }
+  }
+
 
 
 }
