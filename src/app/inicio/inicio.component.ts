@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { postagem } from '../model/postagem';
 import { tema } from '../model/tema';
 import { usuario } from '../model/usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -25,11 +26,16 @@ export class InicioComponent implements OnInit {
     usuario: usuario = new usuario()
     idUser = environment.id
 
+    key = 'data'  //ordenaçaõ de postagem, ordenar por data de preenchimento
+    reverse = true // normalmente ele é falso, fica da primeira postagem para o útlimo mas colocando true vai reverter essa ordem. Vai chamar essa variavel nos ngFor no inicio/html
+
   constructor( 
     private router: Router,  //tem que sempre chamar uma variavel local de router se for usar na aplicação;
     private postagemService: PostagemService,
     private temaService: TemaService,
-    public authService: AuthService
+    private authService: AuthService,
+    private alertas: AlertasService
+
   ) { }
 
   ngOnInit() {
@@ -79,7 +85,7 @@ export class InicioComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: postagem) =>{
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new postagem()
       this.getAllPostagem()
     })

@@ -8,3 +8,11 @@
 } 
 
 como usamos no codigo todo, iremos colocar isso no style global do projeto */ 
+
+.bg{
+    background-color: rgb(224, 200, 219);
+}
+
+.bg-copy{
+    background-color: #c13584;
+}

@@ -22,3 +22,11 @@ ul.social-network li{
 .fa-github-square:hover{
     color:#c13584;
 }
+
+.bg{
+    background-color: rgb(224, 200, 219);
+}
+
+.bg-copy{
+    background-color: #c13584;
+}
