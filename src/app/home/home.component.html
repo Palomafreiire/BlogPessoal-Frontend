@@ -1,0 +1,196 @@
+<!-- MENU-->
+<nav class="navbar navbar-expand-lg navbar-light bg-copy">
+    <a class="navbar-brand text-light" routerLink="/home">All Pop!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-light" routerLink="/home">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Gêneros
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="aventura.html">Aventura</a>
+                    <a class="dropdown-item" href="acao.html">Ação</a>
+                    <a class="dropdown-item" href="comedia.html"> Comédia</a>
+                    <a class="dropdown-item" href="terror.html">Terror</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Redes Sociais
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">GitHub</a>
+                    <a class="dropdown-item" href="#">LinkedIn</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Instagram</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Acesso inscritos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/entrar">Login</a>
+                    <a class="dropdown-item" routerLink="/cadastrar">Cadastrar</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<!-- /MENU-->
+
+<!--jubotron-->
+
+<div class="container-fluid mb-5">
+    <div class="row bg align-items-center">
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 text-black">
+                    <h1 class="display-4">Sobre a página</h1>
+                    <p class="lead">Aqui você encontra tudo sobre séries dos mais variados gêneros e temas. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="https://i.imgur.com/JpL8Hpi.png" alt="imgur paloma" width="500px" height="500px">
+        </div>
+    </div>
+</div>
+
+<!--/jubotron-->
+
+<!-- adicionando um carousel para ficar as imagens rodando na tela-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://i.imgur.com/QdIwR6L.png" alt="Primeiro Slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://i.imgur.com/q3nWLd4.jpeg" alt="Segundo Slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://i.imgur.com/UiSeKgj.jpeg" alt="Terceiro Slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+    </a>
+</div>
+<br>
+
+<!-- /adicionando um carousel-->
+
+<!-- adicionando um cabeçalho-->
+<h5>Destaques: <span class="badge badge-secondary"></span></h5>
+<br>
+<!-- /adicionando um cabeçalho-->
+
+<!-- cards-->
+<div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="https://i.imgur.com/GR9lVOO.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Game Of Thrones</h5>
+            <p class="card-text centralizar">É uma série de televisão norte-americana criada por David Benioff e D.
+                B. Weiss,
+                baseada na série de livros A Song of Ice and Fire de George R. R. Martin.Situada nos continentes
+                fictícios de Westeros e Essos, a série centra-se no Trono de Ferro dos Sete Reinos e segue um enredo
+                de alianças e conflitos entre as famílias nobres dinásticas, seja competindo para reivindicar o
+                trono ou lutando por sua independência.</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="https://i.imgur.com/0U8GvFA.jpeg" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Friends</h5>
+            <p class="card-text centralizar">É uma sitcom americana criada por David Crane e Marta Kauffman e
+                apresentada pela
+                rede de televisão NBC entre 22 de setembro de 1994 e 6 de maio de 2004, com um total de 236
+                episódios. A série girava em torno de um grupo de amigos que vivia no bairro de Greenwich Village,
+                na ilha de Manhattan, na cidade de Nova York.</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="https://i.imgur.com/O2Gia7W.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Greys Anatomy</h5>
+            <p class="card-text centralizar">A série foca na vida de médicos cirurgiões internos, residentes e
+                atendentes; e
+                como eles evoluem na sua profissão ao tentar manter a vida dos seus pacientes e nos seus
+                relacionamentos pessoais. O título da série é uma brincadeira com Anatomia de Gray, um renomado
+                livro de anatomia humana escrito por Henry Gray.A ideia original foi de Shonda Rhimes, que além
+                de idealizadora é produtora executiva.</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+    </div>
+</div>
+<!-- /cards-->
+
+
+
+<!--Rodapé-->
+<footer class="page-footer font-small bg pt-4">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <h4 class="text-dark">Siga-nos nas redes sociais</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <ul class="social-network">
+                    <li>
+                        <a href="https://www.linkedin.com/in/paloma-freire-68282b182/" target="_blank"
+                            class="icoLinkedin">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/palomafreiire" target="_blank" class="icoGithub">
+                            <i class="fa fa-github-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright bg-copy text-center py-3">
+        <span class="text-dark"> 2022 Copyright:</span>
+        <a class="text-dark" target="blank" href="https://github.com/palomafreiire"> Paloma Brazil</a>
+
+    </div>
+
+</footer>
+
+<!--/Rodapé-->

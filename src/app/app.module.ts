@@ -20,6 +20,9 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import {ModalModule} from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
+import { HomeComponent } from './home/home.component';
+import { GeneroComponent } from './genero/genero.component';
+import { AcaoGeneroComponent } from './genero/acao-genero/acao-genero.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { OrderModule } from 'ngx-order-pipe';
     PostagemEditComponent,
     PostagemDeleteComponent,
     UserEditComponent,
-    AlertasComponent
+    AlertasComponent,
+    HomeComponent,
+    GeneroComponent,
+    AcaoGeneroComponent
   ],
   imports: [
     BrowserModule,

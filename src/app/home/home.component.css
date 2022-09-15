@@ -1,0 +1,44 @@
+.fs-16{
+    font-size: 16pt;
+}
+
+.a{
+    cursor: pointer;
+}
+
+.bg-copy{
+    background-color: #c13584;
+}
+
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa{
+    font-size: 35pt;
+    color: white;
+    padding: 10px;
+}
+
+.fa-linkedin-square:hover{
+    color:#0072b1;
+}
+
+.fa-github-square:hover{
+    color:#c13584;
+}
+
+.bg{
+    background-color: rgb(224, 200, 219);
+}
+
+.bg-copy{
+    background-color: #c13584;
+}
