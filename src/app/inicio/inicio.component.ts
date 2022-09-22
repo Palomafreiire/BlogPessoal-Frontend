@@ -16,6 +16,10 @@ import { TemaService } from '../service/tema.service';
 })
 export class InicioComponent implements OnInit {
 
+     nome = environment.nome
+     foto = environment.foto
+     id = environment.id
+
     postagem: postagem = new postagem()
     listaPostagens: postagem[]
     tituloPost: string
@@ -113,6 +117,23 @@ export class InicioComponent implements OnInit {
         this.listaTemas = resp
       })
     }
+  }
+
+  cadastrar(){
+    this.temaService.postTema(this.tema).subscribe({
+      next: (resp:tema) =>{
+      this.tema = resp
+      alert('Tema cadastrado com sucesso!')
+      this.tema = new tema()
+      this.gelAllTemas()
+      },
+      error: (erro) => {
+        if(erro.status == 400){
+          alert('Tema não pode ser cadastrado pois já existe um tema com está descrição');
+        }
+      },
+    })
+
   }
 
 
