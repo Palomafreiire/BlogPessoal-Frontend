@@ -5,8 +5,7 @@
     <div class="col-md-3">
       <div class="div card d-flex align-content-center mt-5 p-3 shadow bg-transparent">
         <div class="row d-flex justify-content-center mb-3">
-          <img src="{{foto}}" alt="" class="img-fluid rounded-circle borda shadow" width="60%"
-            onerror="this.src = '../../assets/img/user2.jpg'">
+          <img src="{{foto}}" alt="" class="img-fluid rounded-circle borda shadow" width="60%">
         </div>
         <div class="row d-flex justify-content-center">
           <p class="text-center font-weight-bold fs-25">{{nome}}</p>
@@ -124,8 +123,7 @@
               <div class="row d-flex align-items-center">
                 <div class="col mt-3">
                   <div class="d-flex justify-content-start">
-                    <img [src]=item.usuario.foto class="rounded-circle ml-4" width="40px" height="40px"
-                      onerror="this.src = '../../assets/img/user2.jpg'">
+                    <img [src]=item.usuario.foto class="rounded-circle ml-4" width="40px" height="40px">
                     <p class="mt-2 ml-2">{{item.usuario.nome}}</p>
                   </div>
                 </div>
@@ -141,7 +139,7 @@
               <hr class="mr-0 ml-0">
               <p class="card-title fs-25 ml-4 mb-3 bg-transparent">{{item.titulo}}</p>
               <div class="d-flex justify-content-center">
-                <img [src]=item.foto width="100%" class="img-fluid" onerror="this.src = '../../assets/img/semfoto.jpg'">
+                <img [src]=item.foto width="100%" class="img-fluid">
               </div>
               <div>
                 <p class="card-text mt-3 ml-4 pb-4">{{item.texto}}</p>
